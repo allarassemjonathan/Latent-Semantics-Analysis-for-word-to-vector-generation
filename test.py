@@ -1162,7 +1162,7 @@ completed their journey, so well did their steeds take them.35
 Now when the sun had set and darkness was over the land.
 
 '''
-
+#clean the data
 corpus = corpus.lower()
 punc = '''±¬¤¸£×¥¿*¶¼¦¹¯§¾´ª½¢¡®…³=²º­¨0123456789!→°()-[]{};:'"«»\,+<>./?@#$%^&*_~©'''
 corpus = corpus.lower()
@@ -1223,6 +1223,6 @@ u = u[0:, 0:k+1]
 f = open('mapping.txt', 'w', encoding='utf-8')
 i = 0
 for el in vocabulary:
-    f.write(el + str(u[i]))
+    f.write(el + str(u[i]) + '\n')
     i = i + 1
 f.close()
